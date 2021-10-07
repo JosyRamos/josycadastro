@@ -1,0 +1,60 @@
+body{
+    background: rgba(56, 54, 54, 0.212);
+    font:normal 15pt arial;
+    text-align: center;
+
+}
+head{
+    text-align: center;
+
+}
+section{
+    background: white;
+    border-radius: 30PX;
+    padding: 20px;
+    width: 600px;
+    margin:auto;
+    text-align: center;
+    box-shadow: 6px 6px 11px black;
+
+}
+footer{
+    text-align: center;
+    font-style: italic;
+
+}
+h1{
+    font: italic;
+    color: black;
+    padding: 5px;
+    box-shadow: 6px 6px 11px black;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+    margin:10px;
+    
+}
+table{
+    font-style: normal;
+    padding: 30 px;
+    box-shadow: black;
+    width:  30px auto;
+    text-align: center;
+    margin:10PX;
+}
+
+.cadastrar{
+    background: cyan;
+
+}
+section{
+    text-align: left;
+    border: solid;
+}
+h3{
+    font-style: normal;
+    padding: 30px;
+    width: 10px auto;
+    text-align: center;
+    margin:10px;
+}
