@@ -4,7 +4,7 @@ class cadastro{
     construtor(){
         this.numero = 1;
         this.arraycadastro = [];
-        this.editId = nuul;
+        this.editId = null;
     };
 
     cadastrar(){
@@ -29,7 +29,7 @@ class cadastro{
 
             let td_numero = tr.insertCell();
             let td_nome = tr.insertCell();
-            let td_idade = tr.innerHTML();
+            let td_idade = tr.insertCell();
             let td_sexo = tr.insertCell();
 
             td_numero = this.arraycadastro[i].numero;
