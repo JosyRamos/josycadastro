@@ -15,25 +15,25 @@
             <h1>Sistema de Cadastro </h1>
             <h2><strong>Menu de Opções:</strong></h2>
             <div class="lineInput">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
 
-            <p><label for="idade">Idade</label>
-                <input type="number" id="idade">
-            </p>
-            <div>
-                <p><label for="sexo">Sexo: </label>
-                    <select nome: "sexo" id="sexo">
-                        <option value="Fem">Feminino</option>
-                        <option value="masc">Masculino</option>
-                    </select>
+                <p><label for="idade">Idade</label>
+                    <input type="number" id="idade">
+                </p>
+                <div>
+                    <p><label for="sexo">Sexo: </label>
+                        <select name="sexo" id="sexo">
+                            <option value="Fem">Feminino</option>
+                            <option value="masc">Masculino</option>
+                        </select>
                 </div>
                 </p>
             </div>
         </form>
         <div class='card'>
-            <P>
-                 <button onclick="cadastro.cadastrar()">Enviar</button>
+            <p>
+                <button onclick="cadastro.cadastrar()">Enviar</button>
                 <button onclick="cadastro.encerrar()">encerrar</button>
             </p>
         </div>
@@ -41,44 +41,44 @@
         <section>
             <form>
                 <label>
-        <table id="table">
-            <tbody id = 'tbody'>
-                <thead>
-                <tr><th>
-                    <h3>Numero</h3>
-                    </th>
-                    <th>
-                       <h3>Nome</h3>
-                    </th>
-                    <th>
-                          <h3>Idade</h3>
-                    </th>
-                    <th>
-                        <h3>Sexo</h3>
-                    </th>
-                    <th>
-                        <h3>opçoes</h3>
-                        <div>
-                        <input type="submit" value="Excluir" onclick="excluir()">
-                        <input type="submit" value="Editar" onclick="editar()">
-                    </div>
-                    </th>
-                </tr>
-                </thead>
-            </tbody>    
-        </table>
-    </label>
-    </form>
-    </section>
+                    <table >
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h3>Numero</h3>
+                                </th>
+                                <th>
+                                    <h3>Nome</h3>
+                                </th>
+                                <th>
+                                    <h3>Idade</h3>
+                                </th>
+                                <th>
+                                    <h3>Sexo</h3>
+                                </th>
+                                <th>
+                                    <h3>opçoes</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id='tbody'>
+
+                        </tbody>
+                    </table>
+                </label>
+            </form>
+        </section>
 
         </p>
-        <div id="list"></div>
     </section>
     <footer>
         <p>&copy; Josileia</p>
     </footer>
-    <script src="script.js"></script>
-</div>
+    <script src="script-teste.js">
+        cadastro.listarPessoas()
+
+    </script>
+    </div>
 </body>
 
 </html>
