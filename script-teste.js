@@ -4,29 +4,36 @@ let cadastro = {
     cadastrar() {
         this.pessoas.push(this.getData())
         this.listarPessoas()
+
+
     },
 
     getData() {
         return {
             nome: document.getElementById('nome').value,
             idade: document.getElementById('idade').value,
-            sexo: document.getElementById('sexo').value
+            sexo: document.getElementById('sexo').value,
+            opcoes: document.getElementById('opcoes').value
         }
     },
 
     listarPessoas() {
         console.table('pessoas', this.pessoas)
         var tbodyRef = document.getElementById('tbody');
-        let linhas  = ''
-
+        let linhas = ''
         this.pessoas.forEach((pessoa, index) => {
-            linhas += this.newLine(index, pessoa);
+        linhas += this.newLine(index, pessoa);
+
+        var excluir = document.createElement('excluir');
+        var editar= document.createElement('editar');
+        
+            opcoes.appendChild(this.excluir());
+            opcoes.appendChild(this.editar());
         })
 
-        tbodyRef.innerHTML = linhas
     },
 
-    newLine(id, pessoas){
+    newLine(id, pessoas) {
         return `<tr>
         <th>
             ${id}
@@ -41,9 +48,12 @@ let cadastro = {
             ${pessoas.sexo}
         </th>
         <th>
-            <h3>opçoes</h3>
+            <h3>${pessoas.opções}</h3>
         </th>
-    </tr>` 
-    }
+    </tr>`
+    },
+   excluir(){
 
+
+   }
 }
