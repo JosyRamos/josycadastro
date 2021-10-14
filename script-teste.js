@@ -14,7 +14,7 @@ let cadastro = {
             nome: document.getElementById('nome').value,
             idade: document.getElementById('idade').value,
             sexo: document.getElementById('sexo').value,
-            opcoes: document.getElementById('opcoes').value
+            opcoes: document.getElementById('opcoes').value = this.excluir()
         }
     },
 
@@ -22,11 +22,11 @@ let cadastro = {
         console.table('pessoas', this.pessoas)
         var tbodyRef = document.getElementById('tbody');
         let linhas = '';
+
         this.pessoas.forEach((pessoa, index) => {
         linhas += this.newLine(index, pessoa);
 
-        excluir.setAttribute('onclick', 'cadastro.excluir()');
-
+            tbodyRef.innerHTML = linhas;
         
             
         })
@@ -62,6 +62,7 @@ let cadastro = {
 
    },
    excluir(){
-    alert('ecluir')
+
+    alert('excluir')
    }
 }
