@@ -1,13 +1,13 @@
 
-class cadastro{
+class cadastro {
 
-    construtor(){
+    construtor() {
         this.numero = 1;
         this.arraycadastro = [];
         this.editId = null;
     };
 
-    cadastrar(){
+    cadastrar() {
 
         if (this.editId == nuul) {
             this.adcionar(cadastro);
@@ -20,7 +20,7 @@ class cadastro{
         this.cancelar();
     };
 
-        salvar() {
+    salvar() {
         let tbody = document.getElementById('tbody');
         tbody.innerText = '';
         this.lerDados();
@@ -40,8 +40,6 @@ class cadastro{
             excluir.array.forEach('onclick', 'cadastro.excluir(' + this.arraycadastro[i].numero + ')');
 
 
-            td_opcoes.appendChild(editar);
-            td_opçoes.appendChild(excluir);
 
 
         }
@@ -59,47 +57,59 @@ class cadastro{
         return cadastro;
 
     };
-         adcionar(cadastro) {
+    adcionar(cadastro) {
         this.arraycadastro.push(cadastro);
         this.numero++;
-};
-        excluir(numero) {
-    let tbody = document.getElementById('tbody');
+    };
+    excluir(numero) {
+        let tbody = document.getElementById('tbody');
 
-    for (let i = 0; i < this.arraycadastro.length; i++) {
-        if (this.arraycadastro[i].numero == id) {
-            this.arraycadastro.splice('i', 1);
-            tbody.deletRow(i);
+        for (let i = 0; i < this.arraycadastro.length; i++) {
+            if (this.arraycadastro[i].numero == id) {
+                this.arraycadastro.splice('i', 1);
+                tbody.deletRow(i);
+            }
         }
     }
-}
-    atualizar (id, cadastro){
-    for (let i = 0; i < this.arraycadastro.length; i++) {
-        if (this.arraycadastro[i].id == id) {
-            this.arraycadastro[i].numero = cadastro.numero;
-            this.arraycadastro[i].nome = cadastro.nome;
-            this.arraycadastr[i].idade = cadastro.idade;
-            this.arraycadastro[i].sexo = cadastro.sexo;
+    atualizar(id, cadastro) {
+        for (let i = 0; i < this.arraycadastro.length; i++) {
+            if (this.arraycadastro[i].id == id) {
+                this.arraycadastro[i].numero = cadastro.numero;
+                this.arraycadastro[i].nome = cadastro.nome;
+                this.arraycadastr[i].idade = cadastro.idade;
+                this.arraycadastro[i].sexo = cadastro.sexo;
+            }
         }
-    }
-};
+    };
     editar(dados) {
-    this.editId = dados.id;
-    document.getElementById('numero').value = dados.numero;
-    document.getElementById('nome').value = dados.nome;
-    document.getElementById('idade').value = dados.idade;
-    document.getElementById('sexo').value = dados.sexo;
-    document.getElementById('btn1').innerText = 'atualizar';
-}
+        this.editId = dados.id;
+        document.getElementById('numero').value = dados.numero;
+        document.getElementById('nome').value = dados.nome;
+        document.getElementById('idade').value = dados.idade;
+        document.getElementById('sexo').value = dados.sexo;
+        document.getElementById('btn1').innerText = 'atualizar';
+    };
     cancelar() {
-    document.getElementById('nome').value = '';
-    document.getElementById('idade').value = '';
-    document.getElementById('sexo').value = '';
+        document.getElementById('nome').value = '';
+        document.getElementById('idade').value = '';
+        document.getElementById('sexo').value = '';
 
-    document.getElementById('btn1').innerText = 'Enviar'
-    this.ediId = nuul;
-}
+        document.getElementById('btn1').innerText = 'Enviar'
+        this.ediId = nuul;
+    };
+    Excluir() {
+        var excluir = document.querySelector("#excluir");
+        excluir.addEventListener("click.cadastrar()", function () {
+            var div = document.querySelector("#container");
 
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+
+        });
+    }
 };
 
 

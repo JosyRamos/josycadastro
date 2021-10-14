@@ -4,6 +4,7 @@ let cadastro = {
     cadastrar() {
         this.pessoas.push(this.getData())
         this.listarPessoas()
+        this.excluir()
         this.encerrar()
 
 
@@ -49,6 +50,7 @@ let cadastro = {
         </th>
         <th>
             <h3>${pessoas.opções}</h3>
+            ${pessoas.excluir}
         </th>
     </tr>`
     },
@@ -62,7 +64,18 @@ let cadastro = {
 
    },
    excluir(){
+        var excluir = document.querySelector("#excluir");
+        excluir.addEventListener("click", function() {
+            var cadastrar = document.querySelector("#cadastrar");
 
-    alert('excluir')
-   }
+            if (cadastrar.style.display === "none") {
+                cadastrar.style.display = "block";
+            } else {
+                cadastrar.style.display = "none";
+            }
+
+        });
+    }
+    
+   
 }

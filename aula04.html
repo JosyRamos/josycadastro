@@ -10,76 +10,42 @@
 </head>
 
 <body>
-    <section>
-        <form>
-            <h1>Sistema de Cadastro </h1>
-            <h2><strong>Menu de Opções:</strong></h2>
-            <div class="lineInput">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome">
-
-                <p><label for="idade">Idade</label>
-                    <input type="number" id="idade">
-                </p>
-                <div>
-                    <p><label for="sexo">Sexo: </label>
-                        <select name="sexo" id="sexo">
-                            <option value="Fem">Feminino</option>
-                            <option value="masc">Masculino</option>
-                        </select>
-                </div>
-                </p>
-            </div>
-        </form>
-        <div class='card'>
-            <p>
-                <button onclick="cadastro.cadastrar()">Enviar</button>
-                <button onclick="cadastro.encerrar()">encerrar</button>
-                <button onclick="cadastro.excluir()">Excluir</button>
-            </p>
+    <h1>Sistema de Cadastro</h1><br><br>
+   <div id= "cadastro">
+       <form name='tbcadastro'>
+           <label>Nome</label>
+           <input type="text" name="txtNome"><br><br>
+           <label>Idade</label>
+           <input type="number" name="txtIdade"><br><br>
+           <label> Sexo:</label> Feminino
+           <input type="radio" name = "txtSexo">Masculino
+           <input type="radio" name = "txtSexo"><br><br>
+           <input type="button" value = "cadastrar">
         </div>
-        <p>
-        <section>
-            <form>
-                <label>
-                    <table >
-                        <thead>
-                            <tr>
-                                <th>
-                                    <h3>Numero</h3>
-                                </th>
-                                <th>
-                                    <h3>Nome</h3>
-                                </th>
-                                <th>
-                                    <h3>Idade</h3>
-                                </th>
-                                <th>
-                                    <h3>Sexo</h3>
-                                </th>
-                                <th>
-                                    <h3 id='opcoes'>opçoes</h3>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id='tbody'>
+            <div id="dtcadastro">
+                <table id = "thcadastro">
+                    <thead>
+                        <tr>
+                            <td>Numero</td>
+                            <td>Nome</td>
+                            <td>Idade</td>
+                            <td>Sexo</td>
+                        </tr>
+                    </thead>
 
-                        </tbody>
-                    </table>
-                </label>
-            </form>
-        </section>
+                </table>
 
-        </p>
+
+            </div>
+
+
+       </form>
     </section>
     <footer>
         <p>&copy; Josileia</p>
     </footer>
-    <script src="script-teste.js">
-        cadastro.listarPessoas()
-
+    <script src="novoarquivo.js">
     </script>
-    </div>
 </body>
 
 </html>
