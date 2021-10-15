@@ -17,13 +17,16 @@
            <input type="text" name="txtNome"><br><br>
            <label>Idade</label>
            <input type="number" name="txtIdade"><br><br>
-           <label> Sexo:</label> Feminino
-           <input type="radio" name = "txtSexo">Masculino
-           <input type="radio" name = "txtSexo"><br><br>
-           <input type="button" value = "cadastrar">
+           <select>
+           <label fot="Sexo" nome="Sexo">Sexo </label>
+            <option value="fem">Feminino</option>
+            <option value="masc">Masculino</option>
+        </select>
+           <input type="button" value = "cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, txtSexo.value)">
+           <input type="button" value = "Salvar" onclick="altcadastros()">
         </div>
             <div id="dtcadastro">
-                <table id = "thcadastro">
+                <table id ="thcadastro">
                     <thead>
                         <tr>
                             <td>Numero</td>

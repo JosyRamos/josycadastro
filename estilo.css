@@ -6,13 +6,14 @@ body{
 }
 head{
     text-align: center;
+    width: 100px;
 
 }
 section{
     background: white;
     border-radius: 30PX;
     padding: 20px;
-    width: 600px;
+    width: 500px;
     margin:auto;
     text-align: center;
     box-shadow: 6px 6px 11px black;
@@ -29,7 +30,7 @@ h1{
     padding: 5px;
     box-shadow: 6px 6px 11px black;
     border-radius: 20px;
-    width: 500px;
+    width: 600px;
     text-align: center;
     margin:10px;
     
@@ -38,7 +39,7 @@ table{
     font-style: normal;
     padding: 30 px;
     box-shadow: black;
-    width:  30px auto;
+    width: 300px;
     text-align: center;
     margin:10PX;
 }
@@ -48,7 +49,7 @@ table{
 
 }
 section{
-    text-align: left;
+    text-align: center;
     border: solid;
 }
 h3{
@@ -58,7 +59,14 @@ h3{
     text-align: center;
     margin:10px;
 }
-#excluir{
-    height: 100px;
+td{
 
+    text-align:center;
+    margin: 10px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+body{
+    text-align: center;
 }
