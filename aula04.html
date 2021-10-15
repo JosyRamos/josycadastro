@@ -11,38 +11,34 @@
 
 <body>
     <h1>Sistema de Cadastro</h1><br><br>
-   <div id= "cadastro">
-       <form name='tbcadastro'>
-           <label>Nome</label>
-           <input type="text" name="txtNome"><br><br>
-           <label>Idade</label>
-           <input type="number" name="txtIdade"><br><br>
-           <select>
-           <label fot="Sexo" nome="Sexo">Sexo </label>
-            <option value="fem">Feminino</option>
-            <option value="masc">Masculino</option>
-        </select>
-           <input type="button" value = "cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, txtSexo.value)">
-           <input type="button" value = "Salvar" onclick="altcadastros()">
-        </div>
-            <div id="dtcadastro">
-                <table id ="thcadastro">
-                    <thead>
-                        <tr>
-                            <td>Numero</td>
-                            <td>Nome</td>
-                            <td>Idade</td>
-                            <td>Sexo</td>
-                        </tr>
-                    </thead>
-
-                </table>
-
-
-            </div>
-
-
-       </form>
+    <div id="cadastro">
+        <form name='tbcadastro'>
+            <label>Nome</label>
+            <input type="text" id="txtNome"><br><br>
+            <label>Idade</label>
+            <input type="number" id="txtIdade"><br><br>
+            <label for="Sexo">Sexo:</label>
+            <select id="slSexo">
+                <option selected>Feminino</option>
+                <option>Masculino</option>
+            </select><br><br>
+            <input type="button" value="cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value)">
+            <input type="button" value="Salvar" onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
+            <input type="button" value="Deletar" onclick="deleteCadastro()">
+    </div>
+    <div id="dtcadastro">
+        <table id="thcadastro">
+            <thead>
+                <tr>
+                    <td>Numero</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>Sexo</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    </form>
     </section>
     <footer>
         <p>&copy; Josileia</p>
