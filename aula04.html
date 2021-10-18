@@ -22,9 +22,10 @@
                 <option selected>Feminino</option>
                 <option>Masculino</option>
             </select><br><br>
-            <input type="button" value="cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value)">
+            <input type="button" value="cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value,)">
             <input type="button" value="Salvar" onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
-            <input type="button" value="Deletar" onclick="deleteCadastro()">
+            <input type="button" value="Cancelar" onclick="cacelarCadastro()">
+
     </div>
     <div id="dtcadastro">
         <table id="thcadastro">
@@ -34,8 +35,12 @@
                     <td>Nome</td>
                     <td>Idade</td>
                     <td>Sexo</td>
+                    <td class="center">Opcoes</td>
                 </tr>
             </thead>
+            <tbody id="tbody">
+                       
+            </tbody>
         </table>
     </div>
     </form>
