@@ -14,13 +14,13 @@ h1{
     margin:10px;
 }
 form{
-    background: rgba(255, 255, 255, 0.301);
+    /*background: rgba(255, 255, 255, 0.301);*/
     border-radius: 30px, center;
     padding: 20px;
     width: 600px;
     margin:30px;
     text-align:center;
-    box-shadow: 6px 6px 11px black;
+    /*box-shadow: 6px 6px 11px black;*/
 
 }
 td{
@@ -62,8 +62,41 @@ tr{
     background:rgba(199, 21, 134, 0.548);
 }
 table td img{
-    width: 22px;
+    width: 27px;
+    border-radius: 20px;
+    background-color: black;
+    padding: 5px ,auto;
+    margin-top: 5PX;
 }
 .center{
     text-align: center;
 }
+.modal{
+    width: 700px;
+    height: 300px;
+    background:rgba(199, 21, 134, 0.548);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   display: none;
+
+
+    }
+    .fechar{
+        width: 30px;
+        height: 30px;
+        background: black;
+        border-radius: 50%;
+        float: right;
+        padding: auto;
+        cursor: pointer;
+    }
+    button{
+        background: rgb(211, 127, 211);
+        border-radius: 10px;
+        padding: 5px;
+        text-align: center;
+
+        
+    }

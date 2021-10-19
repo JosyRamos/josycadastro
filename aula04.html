@@ -12,6 +12,8 @@
 <body>
     <h1>Sistema de Cadastro</h1><br><br>
     <div id="cadastro">
+        <button onclick="soltar()" id="soltar">Clique aqui para cadastrar</button>
+        <div class="modal">
         <form name='tbcadastro'>
             <label>Nome</label>
             <input type="text" id="txtNome"><br><br>
@@ -22,10 +24,12 @@
                 <option selected>Feminino</option>
                 <option>Masculino</option>
             </select><br><br>
-            <input type="button" value="cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value,)">
+            <input type="button" value="cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value,) " >
             <input type="button" value="Salvar" onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
-            <input type="button" value="Cancelar" onclick="cacelarCadastro()">
-
+            <input type="button" value="Cancelar" onclick="cacelarCadastro(txtNome.value,txtIdade.value,slSexo.value)">
+            <div onclick="fechar()" class="fechar"></div>
+            </div>
+            
     </div>
     <div id="dtcadastro">
         <table id="thcadastro">
