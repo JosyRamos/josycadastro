@@ -27,8 +27,11 @@ function cadastrar(nome, idade, sexo, opcoes) {
     let imgDelet = document.createElement("img");
     imgDelet.src = 'img/excluir.svg.svg';
     imgDelet.setAttribute(`onclick`, `deleteCadastro(` + index + `)`);
+    let imgVisualizar = document.createElement("img");
+    imgVisualizar = 'img/visualizar.svg.svg';
     cellOpcoes.appendChild(imgEdit);
     cellOpcoes.appendChild(imgDelet);
+    cellOpcoes.appendChild(imgVisualizar);
 
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
@@ -94,36 +97,6 @@ function cancelarCadastro(nome, idade, sexo) {
 function modal(){
     let modal = document.querySelector(".modal");
     modal.style.display="block";
-    /*cadastros = document.getElementById('thcadastro');
-    var qtdLinhas = cadastros.rows.length;
-    var linha = cadastros.insertRow(qtdLinhas);
-
-    var cellNumero = linha.insertCell(0);
-    var cellNome = linha.insertCell(1);
-    var cellIdade = linha.insertCell(2);
-    var cellSexo = linha.insertCell(3);
-    var cellOpcoes = linha.insertCell(4);
-
-    cellNumero.innerHTML = qtdLinhas;
-    cellNome.innerHTML = nome;
-    cellIdade.innerHTML = idade;
-    cellSexo.innerHTML = sexo;
-
-    let imgEdit = document.createElement("img");
-    imgEdit.src = 'img/editar.svg.svg';
-    imgEdit.setAttribute(`onclick`, `editCadastros(` + index + `)`);
-    let imgDelet = document.createElement("img");
-    imgDelet.src = 'img/excluir.svg.svg';
-    imgDelet.setAttribute(`onclick`, `deleteCadastro(` + index + `)`);
-    cellOpcoes.appendChild(imgEdit);
-    cellOpcoes.appendChild(imgDelet);
-
-    document.getElementById("txtNome").value = "";
-    document.getElementById("txtIdade").value = "";
-    document.getElementById("slSexo").value = "";
-
-     preencheCamposForm();*/
-
 }
 function fechar(){
     let modal = document.querySelector(".modal");
