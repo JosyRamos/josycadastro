@@ -1,6 +1,6 @@
 var cadastros, index;
 
-function cadastrar(nome, idade, sexo, opcoes){
+function cadastrar(nome, idade, sexo, opcoes) {
 
     cadastros = document.getElementById('thcadastro');
     var qtdLinhas = cadastros.rows.length;
@@ -51,26 +51,15 @@ function preencheCamposForm() {
     }
 }
 
-function deleteCadastro(qtdLinhas) {
-    let tbody = document.getElementById("tbody");
-
-    for (var i = 0; i <this.cadastro.length; i++) {
-        //cadastros.rows[i].onclick = function imgDelet() {
-
-            // if( this.cadastros[i].index == index){
-            //.cadastros.splice(i,1);
-            //}
-            //if(this.cadastros[i]qtdLinhas == i) {
-                this.cadastros.splice(i, 1);
-                tbody.deleteRow(qtdLinhas);
-
-                //document.getElementById("txtNome").value = "";
-                //document.getElementById("txtIdade").value = "";
-                //document.getElementById("slSexo").value = "";
-            }
-            return console.log(`delete linha ${qtdLinhas}`);
-            // }
+function deleteCadastro() {
+    
+    for (var i = 0; i < cadastros.rows.length; i++) {
+        if (index == 1) {
+            cadastros.deleteRow(index);
+            
+            return;
         }
+    }
 
 
     //}
@@ -81,4 +70,4 @@ function deleteCadastro(qtdLinhas) {
     // document.getElementById("slSexo").value = "";
     // return;
 
-//}
+}
