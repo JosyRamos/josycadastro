@@ -1,10 +1,11 @@
 var cadastros, index;
-function soltar(){
+function soltar() {
     this.modal();
+    this.fecharSalvar();
+    this.adcionar();
 }
 
 function cadastrar(nome, idade, sexo, opcoes) {
-
 
     cadastros = document.getElementById('thcadastro');
     var qtdLinhas = cadastros.rows.length;
@@ -27,8 +28,12 @@ function cadastrar(nome, idade, sexo, opcoes) {
     let imgDelet = document.createElement("img");
     imgDelet.src = 'img/excluir.svg.svg';
     imgDelet.setAttribute(`onclick`, `deleteCadastro(` + index + `)`);
+
     let imgVisualizar = document.createElement("img");
-    imgVisualizar = 'img/visualizar.svg.svg';
+    imgVisualizar.src = 'img/visualizar.svg.svg';
+    imgVisualizar.setAttribute(`onclick`, `visulCadastro(` + index + `)`)
+
+
     cellOpcoes.appendChild(imgEdit);
     cellOpcoes.appendChild(imgDelet);
     cellOpcoes.appendChild(imgVisualizar);
@@ -37,19 +42,24 @@ function cadastrar(nome, idade, sexo, opcoes) {
     document.getElementById("txtIdade").value = "";
     document.getElementById("slSexo").value = "";
 
-     preencheCamposForm();
+    preencheCamposForm();
 
+    this.fechar();
 }
 function editCadastros(nome, idade, sexo, opcoes) {
-
+    this.modal();
+    this.fecharAdcionar();
+    this.salvar();
     for (var i = 0; i < this.cadastros.rows.length; i++) {
         cadastros.rows[i].onclick = function () {
             index = this.rowIndex;
             document.getElementById("txtNome").value = cadastros.rows[index].cells[1].innerText;
             document.getElementById("txtIdade").value = cadastros.rows[index].cells[2].innerText;
             document.getElementById("slSexo").value = cadastros.rows[index].cells[3].innerText;
+           
+
         }
-       
+
     }
 }
 
@@ -58,6 +68,12 @@ function editarCadastros(nome, idade, sexo, opcoes) {
     cadastros.rows[index].cells[1].innerHTML = nome;
     cadastros.rows[index].cells[2].innerHTML = idade;
     cadastros.rows[index].cells[3].innerHTML = sexo;
+
+    document.getElementById("txtNome").value = "";
+    document.getElementById("txtIdade").value = "";
+    document.getElementById("slSexo").value = "";
+    
+    this.fechar();
 
 }
 function preencheCamposForm() {
@@ -86,19 +102,51 @@ function deleteCadastro() {
 
 
 }
-function cancelarCadastro(nome, idade, sexo) {
+function cacelarCadastro(nome, idade, sexo) {
 
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
     document.getElementById("slSexo").value = "";
-    return;
+
+    this.fechar();
 
 }
-function modal(){
+function modal() {
     let modal = document.querySelector(".modal");
-    modal.style.display="block";
+    modal.style.display = "block";
 }
-function fechar(){
+function fechar() {
     let modal = document.querySelector(".modal");
-    modal.style.display="none";
+    modal.style.display = "none";
 }
+function salvar() {
+    let salvar = document.querySelector(".editarCadastros")
+    salvar.style.display = "block";
+}
+function fecharSalvar(){
+    let salvar = document.querySelector(".editarCadastros")
+    salvar.style.display = "none";
+
+}
+function adcionar() {
+    let cadastrar = document.querySelector(".cadastrar");
+    cadastrar.style.display = "block";
+}
+function fecharAdcionar() {
+    let cadastrar = document.querySelector(".cadastrar");
+    cadastrar.style.display = "none";
+
+}
+function visulCadastro() {
+    let visult = document.querySelector(".visult");
+    visult.style.display = "block";
+    for (var i = 0; i < cadastros.rows.length; i++) {
+        if (index == i) {
+
+            innerHTML = `<p>Nome : ${txtNome}</p> <p>Idade:  ${txtIdade}</p><p>Sexo: ${slSexo}.`
+            return;
+        }
+
+    }
+}
+

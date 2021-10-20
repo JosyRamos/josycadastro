@@ -14,22 +14,29 @@
     <div id="cadastro">
         <button onclick="soltar()" id="soltar">Clique aqui para cadastrar</button>
         <div class="modal">
-        <form name='tbcadastro'>
-            <label>Nome</label>
-            <input type="text" id="txtNome"><br><br>
-            <label>Idade</label>
-            <input type="number" id="txtIdade"><br><br>
-            <label for="Sexo">Sexo:</label>
-            <select id="slSexo">
-                <option selected>Feminino</option>
-                <option>Masculino</option>
-            </select><br><br>
-            <input type="button" value="cadastrar" onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value,) " >
-            <input type="button" value="Salvar" onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
-            <input type="button" value="Cancelar" onclick="cacelarCadastro(txtNome.value,txtIdade.value,slSexo.value)">
-            <div onclick="fechar()" class="fechar"></div>
-            </div>
+            <form name='tbcadastro'>
+                <label>Nome</label>
+                <input type="text" id="txtNome"><br><br>
+                <label>Idade</label>
+                <input type="number" id="txtIdade"><br><br>
+                <label for="Sexo">Sexo:</label>
+                <select id="slSexo">
+                    <option selected>Feminino</option>
+                    <option>Masculino</option>
+                </select><br><br>
+               <input type="button" class="cadastrar" value="Cadastrar"
+                    onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value,) ">
+                <input type="button" class = "editarCadastros" value="Salvar"
+                    onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
+                <input type="button" class="cacelar" value="Cancelar"
+                    onclick="cacelarCadastro(txtNome.value,txtIdade.value,slSexo.value)">
+                <div onclick="fechar()" class="fechar">x</div>
+        </div>
+        <div class="visult">
             
+
+        </div>
+
     </div>
     <div id="dtcadastro">
         <table id="thcadastro">
@@ -43,7 +50,7 @@
                 </tr>
             </thead>
             <tbody id="tbody">
-                       
+
             </tbody>
         </table>
     </div>

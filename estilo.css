@@ -14,13 +14,12 @@ h1{
     margin:10px;
 }
 form{
-    /*background: rgba(255, 255, 255, 0.301);*/
-    border-radius: 30px, center;
-    padding: 20px;
-    width: 600px;
-    margin:30px;
-    text-align:center;
-    /*box-shadow: 6px 6px 11px black;*/
+   background: white;
+    min-width: 300px;
+    padding: 40px;
+    width: 60%;
+   border: 10px, solid #988b7a;
+   
 
 }
 td{
@@ -29,6 +28,7 @@ td{
     width: 10px auto;
     text-align: center;
     margin:10px;}
+
 footer{
     background-color: rgba(0, 0, 0, 0);
     text-align: left;
@@ -36,13 +36,15 @@ footer{
    
 }
 th{
+
     font-style: normal;
     padding: 30px;
     width: 10px auto;
     text-align: center;
     margin:10px;
 }
-input{
+input {
+   
     background-color: rgba(0, 0, 0, 0.048);
 }
 select{
@@ -64,17 +66,15 @@ tr{
 table td img{
     width: 27px;
     border-radius: 20px;
-    background-color: black;
-    padding: 5px ,auto;
-    margin-top: 5PX;
+    padding: 5px ;
+    margin-top: 5PX,auto;
+    background: rgb(197, 58, 81);
 }
 .center{
     text-align: center;
 }
 .modal{
-    width: 700px;
-    height: 300px;
-    background:rgba(199, 21, 134, 0.548);
+   
     position: absolute;
     top:50%;
     left: 50%;
@@ -86,7 +86,8 @@ table td img{
     .fechar{
         width: 30px;
         height: 30px;
-        background: black;
+        background: pink;
+        top:0px;
         border-radius: 50%;
         float: right;
         padding: auto;
@@ -100,3 +101,41 @@ table td img{
 
         
     }
+    .visult{
+        width: 700px;
+        height: 300px;
+        background:rgba(199, 21, 134, 0.548);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        text-align:right;
+        padding: 20px;
+       display: none;
+       margin: 40px;
+
+    }
+    .cadastrar{
+        background: rgb(219, 158, 219);
+        border-radius: 10px;
+        padding: 5px;
+        width: 30px, auto;
+        height: 25px;
+        display: none;
+    }
+    .editarCadastros{
+        background: rgb(194, 140, 194);
+        border-radius: 10px;
+        padding: 5px;
+        width: 30px, auto;
+        height: 25px;
+        display: none;
+
+    }
+    .cacelar{
+        background: rgb(211, 146, 211);
+        border-radius: 10px;
+        padding: 5px;
+        width: 30px, auto;
+        height: 25px;
+        display: block;
+    }
+   
