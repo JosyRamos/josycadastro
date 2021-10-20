@@ -11,7 +11,7 @@ h1{
     border-radius: 20px, center;
     width: 600px;
     text-align: center;
-    margin:10px;
+    margin:10px auto;
 }
 form{
    background:rgb(199, 130, 199);
@@ -33,7 +33,7 @@ footer{
     background-color: rgba(0, 0, 0, 0);
     text-align: left;
     width: auto, 10px;
-   
+   margin:10px, auto;
 }
 th{
 
@@ -55,8 +55,8 @@ table{
     background: rgba(255, 255, 255, 0.425) ;
     border-radius: 30px, center;
     padding: 20px;
-    width: 600px;
-    margin:30px;
+    width: 600px ;
+    margin:30px auto;
     text-align:center;
     box-shadow: 6px 6px 11px black;
 }
@@ -74,12 +74,15 @@ table td img{
     text-align: center;
 }
 .modal{
-   
+    font-family: italic;
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
    display: none;
+   margin-top:10px,auto;
+   border:turquoise, 50px;
+   box-shadow: 10px 10px 11px;
 
 
     }
