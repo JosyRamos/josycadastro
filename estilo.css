@@ -14,11 +14,13 @@ h1{
     margin:10px auto;
 }
 form{
-   background:rgb(199, 130, 199);
-    min-width: 300px;
-    padding: 50px;
-    width: 60%;
-   border: 10px, solid #988b7a;
+  background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 30%;
+   position: absolute;
+   top:50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
    
 
 }
@@ -70,21 +72,20 @@ table td img{
     margin-top: 5PX,auto;
     background: rgb(197, 58, 81);
 }
-.center{
-    text-align: center;
-}
+
 .modal{
     font-family: italic;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top:0,;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
    display: none;
-   margin-top:10px,auto;
-   border:turquoise, 50px;
-   box-shadow: 10px 10px 11px;
-
-
+    justify-content: center;
+   position: fixed;
+   background-color: rgb(0,0,0,0.5);
+   align-items: center;
+   transform: scale(1.1);
     }
     .fechar{
         width: 30px;
@@ -119,27 +120,37 @@ table td img{
     .cadastrar{
         background: rgb(219, 158, 219);
         border-radius: 10px;
-        padding: 5px;
-        width: 30px, auto;
-        height: 25px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
         display: none;
+     
     }
     .editarCadastros{
-        background: rgb(194, 140, 194);
+        background: rgb(219, 158, 219);
         border-radius: 10px;
-        padding: 5px;
-        width: 30px, auto;
-        height: 25px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
         display: none;
-
     }
     .cacelar{
-        background: rgb(211, 146, 211);
+          background: rgb(219, 158, 219);
         border-radius: 10px;
-        padding: 5px;
-        width: 30px, auto;
-        height: 25px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top:55%;
+        left: 35%;
+        transform: translate(-30%,-30%);
         display: block;
+       
         
     }
     .txtNome{
