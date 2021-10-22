@@ -99,10 +99,15 @@ table td img{
         cursor: pointer;
     }
     button{
-        background-color:rgba(0, 0, 0, 0.24);
-        border-radius: 10px;
+        font:italic;
+        color:black;
+        box-shadow:10px,10px,11px ,black;
+        border-radius: 20px;
         padding: 5px;
+        width: 10%;
+        height: 10%;
         text-align: center;
+        margin: 10px;
 
         
     }
