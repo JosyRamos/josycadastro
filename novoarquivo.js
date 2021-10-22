@@ -1,6 +1,7 @@
 var cadastros, index;
 function soltar() {
     this.modal();
+    this.cacelarAbrir();
     this.fecharSalvar();
     this.adcionar();
 }
@@ -50,6 +51,7 @@ function editCadastros(nome, idade, sexo, opcoes) {
     this.modal();
     this.fecharAdcionar();
     this.salvar();
+    this.cacelarAbrir();
     for (var i = 0; i < this.cadastros.rows.length; i++) {
         cadastros.rows[i].onclick = function () {
             index = this.rowIndex;
@@ -102,8 +104,7 @@ function deleteCadastro() {
 }
 
 
-
-function cacelarCadastro(nome, idade, sexo) {
+function cacelarCadastro() {
 
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
@@ -127,7 +128,6 @@ function salvar() {
 function fecharSalvar() {
     let salvar = document.querySelector(".editarCadastros")
     salvar.style.display = "none";
-
 }
 function adcionar() {
     let cadastrar = document.querySelector(".cadastrar");
@@ -138,16 +138,30 @@ function fecharAdcionar() {
     cadastrar.style.display = "none";
 
 }
+function cacelaFechar(){
+    let cacelar = document.querySelector(".cacelar");
+    cacelar.style.display = "none";
+}
+function cacelarAbrir(){
+    let cacelar = document.querySelector(".cacelar");
+    cacelar.style.display = "block";
+}
+
 function visulCadastro() {
-    let visult = document.querySelector(".visult");
-    visult.style.display = "block";
-    for (var i = 0; i < cadastros.rows.length; i++) {
-        if (index == i) {
+    
+   this.modal();
+   this.desabilitar();
+   this.editCadastros();
+   this.cacelaFechar();
+   this.fecharAdcionar();
+   this.fecharSalvar();
 
-            innerHTML = `<p>Nome : ${txtNome}</p> <p>Idade:  ${txtIdade}</p><p>Sexo: ${slSexo}.`
-            return;
-        }
+}
 
-    }
+function desabilitar(nome,idade,sexo){
+
+    document.getElementById("#txtNome").desabled=true;
+    document.getElementById("#txtIdade").desabled=true;
+    document.getElementById("#slSexo").desabled=true;
 }
 

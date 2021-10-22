@@ -121,7 +121,7 @@ table td img{
         padding: 20px;
        display: none;
        margin: 40px;
-
+       
     }
     .cadastrar{
         background-color:rgba(0, 0, 0, 0.24);
@@ -157,7 +157,6 @@ table td img{
         transform: translate(-10%,-10%);
         display: block;
        
-        
     }
     .txtNome{
         width:200px;
