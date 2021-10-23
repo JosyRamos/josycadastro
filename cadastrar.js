@@ -1,5 +1,6 @@
 function cadastrar(nome, idade, sexo, opcoes) {
 
+
     cadastros = document.getElementById('thcadastro');
     var qtdLinhas = cadastros.rows.length;
     var linha = cadastros.insertRow(qtdLinhas);
@@ -36,6 +37,8 @@ function cadastrar(nome, idade, sexo, opcoes) {
     document.getElementById("slSexo").value = "";
 
     preencheCamposForm();
+    
+    this.gravar();
 
     this.fechar();
 }

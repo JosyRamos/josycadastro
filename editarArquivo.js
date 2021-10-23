@@ -29,5 +29,6 @@ function editarCadastros(nome, idade, sexo, opcoes,) {
     document.getElementById("txtIdade").value = "";
     document.getElementById("slSexo").value = "";
     this.fechar();
+    this.gravar();
 
 }
