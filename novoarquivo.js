@@ -48,10 +48,12 @@ function cadastrar(nome, idade, sexo, opcoes) {
     this.fechar();
 }
 function editCadastros(nome, idade, sexo, opcoes) {
+    this.desabilitar(false);
     this.modal();
     this.fecharAdcionar();
     this.salvar();
     this.cacelarAbrir();
+
     for (var i = 0; i < this.cadastros.rows.length; i++) {
         cadastros.rows[i].onclick = function () {
             index = this.rowIndex;
@@ -65,11 +67,12 @@ function editCadastros(nome, idade, sexo, opcoes) {
     }
 }
 
-function editarCadastros(nome, idade, sexo, opcoes) {
+function editarCadastros(nome, idade, sexo, opcoes,) {
 
     cadastros.rows[index].cells[1].innerHTML = nome;
     cadastros.rows[index].cells[2].innerHTML = idade;
     cadastros.rows[index].cells[3].innerHTML = sexo;
+   
 
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
@@ -138,30 +141,32 @@ function fecharAdcionar() {
     cadastrar.style.display = "none";
 
 }
-function cacelaFechar(){
+function cacelaFechar() {
     let cacelar = document.querySelector(".cacelar");
     cacelar.style.display = "none";
 }
-function cacelarAbrir(){
+function cacelarAbrir() {
     let cacelar = document.querySelector(".cacelar");
     cacelar.style.display = "block";
 }
 
 function visulCadastro() {
-    
-   this.modal();
-   this.desabilitar();
-   this.editCadastros();
-   this.cacelaFechar();
-   this.fecharAdcionar();
-   this.fecharSalvar();
+
+    this.editCadastros();
+    this.editCadastros();
+    this.cacelaFechar();
+    this.fecharAdcionar();
+    this.fecharSalvar();
+    this.desabilitar(true);
 
 }
 
-function desabilitar(nome,idade,sexo){
+function desabilitar(disabled) {
 
-    document.getElementById("#txtNome").desabled=true;
-    document.getElementById("#txtIdade").desabled=true;
-    document.getElementById("#slSexo").desabled=true;
+    document.getElementById("txtNome").disabled = disabled;
+    document.getElementById("txtIdade").disabled = disabled;
+    document.getElementById("slSexo").disabled = disabled;
+
+
 }
 
