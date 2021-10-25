@@ -15,6 +15,7 @@ function cadastrar(nome, idade, sexo, opcoes) {
     cellNome.innerHTML = nome;
     cellIdade.innerHTML = idade;
     cellSexo.innerHTML = sexo;
+  
 
     let imgEdit = document.createElement("img");
     imgEdit.src = 'img/editar.svg.svg';
@@ -32,13 +33,20 @@ function cadastrar(nome, idade, sexo, opcoes) {
     cellOpcoes.appendChild(imgDelet);
     cellOpcoes.appendChild(imgVisualizar);
 
+    
+
+    this.adcionarLocal();
+
+
+    
+
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
     document.getElementById("slSexo").value = "";
 
     preencheCamposForm();
     
-    this.gravar();
+    
 
     this.fechar();
 }
