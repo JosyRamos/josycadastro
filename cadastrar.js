@@ -1,4 +1,4 @@
-function cadastrar(nome, idade, sexo, opcoes) {
+function cad(nome, idade, sexo, opcoes) {
 
 
     cadastros = document.getElementById('thcadastro');
@@ -15,7 +15,7 @@ function cadastrar(nome, idade, sexo, opcoes) {
     cellNome.innerHTML = nome;
     cellIdade.innerHTML = idade;
     cellSexo.innerHTML = sexo;
-  
+
 
     let imgEdit = document.createElement("img");
     imgEdit.src = 'img/editar.svg.svg';
@@ -33,10 +33,18 @@ function cadastrar(nome, idade, sexo, opcoes) {
     cellOpcoes.appendChild(imgDelet);
     cellOpcoes.appendChild(imgVisualizar);
 
-    
+  /*  let incluir = JSON.parse(localStorage.getItem("cadastros"));
+    incluir = [];
 
-    this.adcionarLocal();
+    incluir.push(cadastrar);*/
 
+    var dadosSalvos= [
+        nome,
+        idade,
+        sexo
+    ]
+
+    localStorage.setItem('dadosCadastros', JSON.stringify(dadosSalvos));
 
     
 
@@ -45,11 +53,18 @@ function cadastrar(nome, idade, sexo, opcoes) {
     document.getElementById("slSexo").value = "";
 
     preencheCamposForm();
-    
-    
+
+
 
     this.fechar();
+
+
+
 }
+
+   
+
+
 function preencheCamposForm() {
     for (var i = 0; i < this.cadastros.rows.length; i++) {
         cadastros.rows[i].onclick = function () {

@@ -1,5 +1,5 @@
-var  index;
-let cadastros=[nome,idade,sexo];
+var cadastros, index;
+
 function soltar() {
     this.modal();
     this.cacelarAbrir();

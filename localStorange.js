@@ -1,18 +1,13 @@
-function adcionarLocal(){
-   
-        let cadastros = JSON.parse(localStorage.getItem('cadastros'));
+function adcionarLocal(nome,idade,sexo){    
 
-        cadastros.push(
-            {
-                txtNome: nome.value,
-                txtIdade: idade.value,
-                slSexo: sexo.value
+    var dadosSalvos= [
+        nome,
+        idade,
+        sexo
+    ]
 
-
-            }
-        )
-        localStorage.setItem('cadastros',JSON.stringify(cadastros));
-    }
+    localStorage.setItem('dadosCadastros', JSON.stringify(dadosSalvos));
+}
  
  function VisulLocal(){
      document.getElementById("TxtNome").value=localStorage.getItem("nome");

@@ -6,6 +6,7 @@ function deleteCadastro() {
             document.getElementById("txtNome").value = "";
             document.getElementById("txtIdade").value = "";
             document.getElementById("slSexo").value = "";
+            localStorage.clear();
             return;
         }
     }

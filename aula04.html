@@ -14,7 +14,7 @@
     <div id="cadastro">
         <button onclick="soltar()" id="soltar">Clique aqui para cadastrar</button>
         <div class="modal">
-            <form name='tbcadastro'>
+            <form name='tbcadastro' id='tbcadastro'>
                 <label>Nome</label>
                 <input type="text" class="txtNome" id="txtNome"><br><br>
                 <label>Idade</label>
@@ -24,8 +24,8 @@
                     <option selected>Feminino</option>
                     <option>Masculino</option>
                 </select><br><br>
-                <input type="button" class="cadastrar" value="Cadastrar"
-                    onclick="cadastrar(txtNome.value, txtIdade.value, slSexo.value,) ">
+                <input type="button" class="cad" value="Cadastrar"
+                    onclick="cad(txtNome.value, txtIdade.value, slSexo.value,) ">
                 <input type="button" class="editarCadastros" value="Salvar"
                     onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
                 <input type="button" class="cacelar" value="Cancelar"
@@ -71,7 +71,7 @@
     </script>
     <script src="cadastrar.js">
     </script>
-    <script src = localStorange.js>
+    <script src=localStorange.js>
     </script>
 </body>
 

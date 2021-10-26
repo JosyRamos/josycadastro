@@ -15,12 +15,12 @@ function fecharSalvar() {
     salvar.style.display = "none";
 }
 function adcionar() {
-    let cadastrar = document.querySelector(".cadastrar");
-    cadastrar.style.display = "block";
+    let cad = document.querySelector(".cad");
+    cad.style.display = "block";
 }
 function fecharAdcionar() {
-    let cadastrar = document.querySelector(".cadastrar");
-    cadastrar.style.display = "none";
+    let cad = document.querySelector(".cad");
+    cad.style.display = "none";
 
 }
 function cacelaFechar() {
