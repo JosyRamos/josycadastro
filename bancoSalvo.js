@@ -5,4 +5,6 @@ function bancoSalvo() {
       console.log(obj);
 
     }
+
+    var nome = localStorage.getItem('bancoDados',nome);
 }

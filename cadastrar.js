@@ -62,6 +62,7 @@ function cad(nome, idade, sexo, opcoes) {
 
     preencheCamposForm();
 
+    this.bancoSalvos(); 
 
 
     this.fechar();
