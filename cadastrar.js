@@ -33,20 +33,28 @@ function cad(nome, idade, sexo, opcoes) {
     cellOpcoes.appendChild(imgDelet);
     cellOpcoes.appendChild(imgVisualizar);
 
-  /*  let incluir = JSON.parse(localStorage.getItem("cadastros"));
-    incluir = [];
+    /*  let incluir = JSON.parse(localStorage.getItem("cadastros"));
+      incluir = [];
+  
+      incluir.push(cadastrar);*/
 
-    incluir.push(cadastrar);*/
+    let bancoDados = JSON.parse(localStorage.getItem('bancoDados') || '[]')
+    bancoDados.push(
+        {
+            txtNome: nome,
+            txtIdade: idade,
+            slSexo: sexo
 
-    var dadosSalvos= [
-        nome,
-        idade,
-        sexo
-    ]
+        }
+    )
 
-    localStorage.setItem('dadosCadastros', JSON.stringify(dadosSalvos));
+    localStorage.setItem('bancoDados', JSON.stringify(bancoDados))
 
-    
+
+
+
+
+
 
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
@@ -61,9 +69,6 @@ function cad(nome, idade, sexo, opcoes) {
 
 
 }
-
-   
-
 
 function preencheCamposForm() {
     for (var i = 0; i < this.cadastros.rows.length; i++) {

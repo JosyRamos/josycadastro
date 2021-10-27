@@ -2,9 +2,12 @@ body{
     background: rgba(56, 54, 54, 0.212);
     font:normal 15pt arial;
     text-align: center;
+    /*background-image: url(https://imgur.com/mK5j6Cw.png);*/
+    background-image: url(https://imgur.com/rgPTlNm.png);
+  
 }
 h1{
-    font: italic;
+    font: italic;   
     color: black;
     padding: 5px ;
     box-shadow: 10px 10px 11px black;
@@ -23,7 +26,8 @@ form{
    top:50%;
    left:50%;
    transform: translate(-50%,-50%);
-   
+  /* background-image: url(https://imgur.com/WrBAxun.png);*/
+  background-image: url(https://imgur.com/rgPTlNm.png);
 
 }
 td{
