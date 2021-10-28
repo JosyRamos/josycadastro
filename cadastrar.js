@@ -50,10 +50,13 @@ function cad(nome, idade, sexo, opcoes) {
 
     localStorage.setItem('bancoDados', JSON.stringify(bancoDados))
 
+    for (var i = 0; i < cad.length; i++) {
 
-
-
-
+        let bancoDados = JSON.parse(localStorage.getItem('bancoDados')|| '[]')
+        localStorage.getItem('bancoDados',bancoDados)
+        console.log(bancoDados)
+        
+    }
 
 
     document.getElementById("txtNome").value = "";
@@ -62,7 +65,9 @@ function cad(nome, idade, sexo, opcoes) {
 
     preencheCamposForm();
 
-    this.bancoSalvos(); 
+
+
+    /*this.bancoSalvos(); */
 
 
     this.fechar();

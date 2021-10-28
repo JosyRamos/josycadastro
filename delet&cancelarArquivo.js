@@ -1,13 +1,28 @@
 function deleteCadastro() {
     for (var i = 0; i < cadastros.rows.length; i++) {
         if (index == i) {
-            cadastros.deleteRow(index);
+        /*   cadastros.deleteRow(index);*/
+        localStorage.removeItem(index)
+
+           /*  cad.splice(index);*/
 
             document.getElementById("txtNome").value = "";
             document.getElementById("txtIdade").value = "";
             document.getElementById("slSexo").value = "";
-            localStorage.clear();
-            return;
+
+          
+          return;
+          if (onclick == deleteCadastro){
+
+            for (var i = 0; i < cadastros.rows.length; i++) {
+           if (index == i) {
+
+               bancoDados.splice(index,1)
+
+           }
+       }
+
+   }
         }
     }
 

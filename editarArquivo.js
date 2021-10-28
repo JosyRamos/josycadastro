@@ -20,9 +20,20 @@ function editCadastros(nome, idade, sexo, opcoes) {
 
 function editarCadastros(nome, idade, sexo, opcoes,) {
 
+
+    bancoDados[index] = JSON.stringify({
+        nome: ("#txtNome"),
+        idade: ("#txtIdade"),
+        sexo: ("#slSexo"),
+
+    });
+    localStorage.setItem("bancoDados", JSON.stringify());
+
     cadastros.rows[index].cells[1].innerHTML = nome;
     cadastros.rows[index].cells[2].innerHTML = idade;
     cadastros.rows[index].cells[3].innerHTML = sexo;
+
+
 
 
     document.getElementById("txtNome").value = "";
