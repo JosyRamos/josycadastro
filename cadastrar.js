@@ -16,13 +16,15 @@ function cad(nome, idade, sexo, opcoes) {
     cellIdade.innerHTML = idade;
     cellSexo.innerHTML = sexo;
 
+    //let bancoDados = JSON.parse(localStorage.getItem('bancoDados') || '[]')
 
     let imgEdit = document.createElement("img");
     imgEdit.src = 'img/editar.svg.svg';
     imgEdit.setAttribute(`onclick`, `editCadastros(` + index + `)`);
-    let imgDelet = document.createElement("img");
-    imgDelet.src = 'img/excluir.svg.svg';
-    imgDelet.setAttribute(`onclick`, `deleteCadastro(` + index + `)`);
+    /* let imgDelet = document.createElement("img");
+     imgDelet.src = 'img/excluir.svg.svg';
+     const pos = bancoDados.indexOf(index);
+     imgDelet.setAttribute(`onclick`, `deleteCadastro(` + pos + `)`);*/
 
     let imgVisualizar = document.createElement("img");
     imgVisualizar.src = 'img/visualizar.svg.svg';
@@ -30,7 +32,7 @@ function cad(nome, idade, sexo, opcoes) {
 
 
     cellOpcoes.appendChild(imgEdit);
-    cellOpcoes.appendChild(imgDelet);
+    // cellOpcoes.appendChild(imgDelet);
     cellOpcoes.appendChild(imgVisualizar);
 
     /*  let incluir = JSON.parse(localStorage.getItem("cadastros"));
@@ -38,7 +40,7 @@ function cad(nome, idade, sexo, opcoes) {
   
       incluir.push(cadastrar);*/
 
-    let bancoDados = JSON.parse(localStorage.getItem('bancoDados') || '[]')
+     bancoDados = JSON.parse(localStorage.getItem('bancoDados'));
     bancoDados.push(
         {
             txtNome: nome,
@@ -50,13 +52,21 @@ function cad(nome, idade, sexo, opcoes) {
 
     localStorage.setItem('bancoDados', JSON.stringify(bancoDados))
 
+    let imgDelet = document.createElement("img");
+    imgDelet.src = 'img/excluir.svg.svg';
+    const pos = bancoDados.indexOf(index);
+    imgDelet.setAttribute(`onclick`, `deleteCadastro(` + pos + `)`);
+    cellOpcoes.appendChild(imgDelet);
+
     for (var i = 0; i < cad.length; i++) {
 
-        let bancoDados = JSON.parse(localStorage.getItem('bancoDados')|| '[]')
-        localStorage.getItem('bancoDados',bancoDados)
-        console.log(bancoDados)
-        
+        bancoDados = JSON.parse(localStorage.getItem('bancoDados'))
+        localStorage.getItem('bancoDados', bancoDados)
+        // console.log(bancoDados)
+
     }
+
+    adcionarLocal();
 
 
     document.getElementById("txtNome").value = "";
