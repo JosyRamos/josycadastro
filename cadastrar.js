@@ -40,7 +40,7 @@ function cad(nome, idade, sexo, opcoes) {
   
       incluir.push(cadastrar);*/
 
-     bancoDados = JSON.parse(localStorage.getItem('bancoDados'));
+    const bancoDados = JSON.parse(localStorage.getItem('bancoDados')||'[]');
     bancoDados.push(
         {
             txtNome: nome,
