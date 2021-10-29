@@ -1,8 +1,13 @@
 function deleteCadastro() {
+
+    bancoDados = JSON.parse(localStorage.getItem('bancoDados'))
+    localStorage.getItem('bancoDados',index)
+
     for (var i = 0; i < cadastros.rows.length; i++) {
         if (index == i) {
+           /* bancoDados.splice.delete(bancoDados,index)
         /*   cadastros.deleteRow(index);*/
-        localStorage.removeItem(index)
+       localStorage.removeItem('bancoDados')
 
            /*  cad.splice(index);*/
 
