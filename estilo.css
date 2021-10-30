@@ -139,6 +139,17 @@ table td img{
         display: none;
      
     }
+
+    .bancoS{
+        background-color:rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+        width: 30%;
+        height: 20%;
+        position: absolute;
+        top:60%;
+        left:30%;
+        transform: translate(-10%,-10%);
+    }
     .editarCadastros{
         background-color:rgba(0, 0, 0, 0.24);
         border-radius: 10px;

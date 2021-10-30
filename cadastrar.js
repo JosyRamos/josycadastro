@@ -1,4 +1,4 @@
-function cad(nome, idade, sexo, opcoes) {
+function cad(nome, idade, sexo, opcoes,) {
 
 
     cadastros = document.getElementById('thcadastro');
@@ -49,11 +49,7 @@ function cad(nome, idade, sexo, opcoes) {
     )
 
     localStorage.setItem('bancoDados', JSON.stringify(bancoDados))
-
-
-
-
-
+    bancoDados = JSON.parse(localStorage.getItem('bancoDados'))
 
 
     document.getElementById("txtNome").value = "";
@@ -62,22 +58,10 @@ function cad(nome, idade, sexo, opcoes) {
 
     preencheCamposForm();
 
-    this.bancoSalvos(); 
+    // this.bancoSalvos(); 
 
 
     this.fechar();
 
 
-
-}
-
-function preencheCamposForm() {
-    for (var i = 0; i < this.cadastros.rows.length; i++) {
-        cadastros.rows[i].onclick = function () {
-            index = this.rowIndex;
-
-        }
-
-
-    }
 }

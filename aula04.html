@@ -13,6 +13,7 @@
     <h1>Sistema de Cadastro</h1><br><br>
     <div id="cadastro">
         <button onclick="soltar()" id="soltar">Clique aqui para cadastrar</button>
+       <button onclick="bancoSalvo(txtNome.vavlue, txtIdade.value, slSexo.value)" id='bancoS'>Carregar</button>
         <div class="modal">
             <form name='tbcadastro' id='tbcadastro'>
                 <label>Nome</label>
@@ -25,7 +26,7 @@
                     <option>Masculino</option>
                 </select><br><br>
                 <input type="button" class="cad" value="Cadastrar"
-                    onclick="cad(txtNome.value, txtIdade.value, slSexo.value,) ">
+                    onclick="cad(txtNome.value, txtIdade.value, slSexo.value) ">
                 <input type="button" class="editarCadastros" value="Salvar"
                     onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
                 <input type="button" class="cacelar" value="Cancelar"
@@ -71,9 +72,9 @@
     </script>
     <script src="cadastrar.js">
     </script>
-    <script src=localStorange.js>
-    </script>
     <script src=bancoSalvo.js>
+    </script>
+    <script src=preencheCamposForm.js>
     </script>
 </body>
 

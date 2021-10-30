@@ -1,10 +1,8 @@
-function bancoSalvo() {
-    for (var i = 0; i < cad.length; i++) {
-
-      var obj = JSON.parse(cad);
-      console.log(obj);
-
-    }
-
-    var nome = localStorage.getItem('bancoDados',nome);
+function bancoSalvo(nome,idade,sexo) {
+  for (var i = 0; i < this.cadastros.rows.length; i++) {
+    cadastros.rows[i].onclick = function () {
+        index = this.rowIndex;
+  document.getElementById('tbCadastros').value=localStorage.bancoDados;
+}
+  }
 }
