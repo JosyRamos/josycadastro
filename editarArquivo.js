@@ -24,8 +24,6 @@ function editarCadastros(nome, idade, sexo, opcoes,) {
     cadastros.rows[index].cells[2].innerHTML = idade;
     cadastros.rows[index].cells[3].innerHTML = sexo;
 
-    
-
 
     document.getElementById("txtNome").value = "";
     document.getElementById("txtIdade").value = "";
@@ -33,4 +31,9 @@ function editarCadastros(nome, idade, sexo, opcoes,) {
     this.fechar();
   
 
+}
+
+function teste(){
+
+window.alert('iniciando a função!!!')
 }

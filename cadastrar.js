@@ -1,3 +1,5 @@
+
+
 function cad(nome, idade, sexo, opcoes,) {
 
 
@@ -57,6 +59,7 @@ function cad(nome, idade, sexo, opcoes,) {
     document.getElementById("slSexo").value = "";
 
     preencheCamposForm();
+  //  window.addEventListener("load",inicia());
 
     // this.bancoSalvos(); 
 
@@ -65,3 +68,32 @@ function cad(nome, idade, sexo, opcoes,) {
 
 
 }
+
+function inicia(){
+   
+
+    var cellNumero = linha.insertCell(0);
+    var cellNome = linha.insertCell(1);
+    var cellIdade = linha.insertCell(2);
+    var cellSexo = linha.insertCell(3);
+    var cellOpcoes = linha.insertCell(4);
+
+    cellNumero.innerHTML = qtdLinhas;
+    cellNome.innerHTML = nome;
+    cellIdade.innerHTML = idade;
+    cellSexo.innerHTML = sexo;
+
+
+    let imgEdit = document.createElement("img");
+    imgEdit.src = 'img/editar.svg.svg';
+    imgEdit.setAttribute(`onclick`, `editCadastros(` + index + `)`);
+    let imgDelet = document.createElement("img");
+    imgDelet.src = 'img/excluir.svg.svg';
+    imgDelet.setAttribute(`onclick`, `deleteCadastro(` + index + `)`);
+
+    let imgVisualizar = document.createElement("img");
+    imgVisualizar.src = 'img/visualizar.svg.svg';
+    imgVisualizar.setAttribute(`onclick`, `visulCadastro(` + index + `)`)
+
+}
+
