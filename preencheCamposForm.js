@@ -3,7 +3,7 @@ function preencheCamposForm(nome, idade, sexo, opcoes) {
         cadastros.rows[i].onclick = function () {
             index = this.rowIndex;
 
-            let bancoDados = JSON.parse(localStorage.getItem('bancoDados') || '[]')
+          /*  let bancoDados = JSON.parse(localStorage.getItem('bancoDados') || '[]')
             bancoDados.push(
                 {
                     txtNome: nome,
@@ -14,7 +14,7 @@ function preencheCamposForm(nome, idade, sexo, opcoes) {
             )
 
             localStorage.setItem('bancoDados', JSON.stringify(bancoDados))
-            bancoDados = JSON.parse(localStorage.getItem('bancoDados'))
+            bancoDados = JSON.parse(localStorage.getItem('bancoDados'))*/
 
             //bancoDados=linha.insertCell(index);
             //bancoDados.innerHTML[index]
