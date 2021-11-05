@@ -1,7 +1,6 @@
 function visulCadastro() {
 
     this.editCadastros();
-    this.editCadastros();
     this.cacelaFechar();
     this.fecharAdcionar();
     this.fecharSalvar();

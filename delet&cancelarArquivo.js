@@ -1,17 +1,25 @@
-function deleteCadastro() {
-    for (var i = 0; i < cadastros.rows.length; i++) {
-        if (index == i) {
-            cadastros.deleteRow(index);
+function deleteCadastro() { 
+   
+      for (var i = 0; i < this.cadastros.rows.length; i++) {
+        cadastros.rows[i].onclick = function (i) {
+            index = this.rowIndex;
+            let bancoDados = localStorage.getItem('bancoDados');
+            bancoDados = JSON.parse(bancoDados);
 
-            document.getElementById("txtNome").value = "";
-            document.getElementById("txtIdade").value = "";
-            document.getElementById("slSexo").value = "";
-        
+      let del = bancoDados.indexOf(bancoDados[index-1])
+       
+           bancoDados.splice(del,1)
+      
+           document.getElementById("txtNome").value = "";
+           document.getElementById("txtIdade").value = "";
+           document.getElementById("slSexo").value = "";
+
+           localStorage.setItem('bancoDados', JSON.stringify(bancoDados))
+
         }
     }
 
 }
-
 
 function cacelarCadastro() {
 
