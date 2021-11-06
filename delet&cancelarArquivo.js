@@ -6,7 +6,7 @@ function deleteCadastro() {
             let bancoDados = localStorage.getItem('bancoDados');
             bancoDados = JSON.parse(bancoDados);
 
-      let del = bancoDados.indexOf(bancoDados[index-1])
+            let del = bancoDados.indexOf(bancoDados[index-1])
        
            bancoDados.splice(del,1)
       
