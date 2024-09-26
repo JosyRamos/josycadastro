@@ -1,82 +1,116 @@
 
-const cadastro = [];
+class cadastro {
 
-const nome = document.querySelector('#nome');
-const idade = document.querySelector('#idade');
-const sexo = document.querySelector('#sexo');
-const table = document.querySelector('#table');
-var i = 0;
+    construtor() {
+        this.numero = 1;
+        this.arraycadastro = [];
+        this.editId = null;
+    };
 
-function cadastrar() {
-    cadastro.push({
+    cadastrar() {
 
-        nome: nome.value,
-        idade: idade.value,
-        sexo: sexo.value
+        if (this.editId == nuul) {
+            this.adcionar(cadastro);
+        }
+        else {
+            this.atualizar(this.editId);
+        }
+        let cadastro = this.lerDados();
+        this.salvar();
+        this.cancelar();
+    };
 
-    });
+    salvar() {
+        let tbody = document.getElementById('tbody');
+        tbody.innerText = '';
+        this.lerDados();
+        for (let i = 0; i < this.cadastro.length; i++) {
+            let tr = tbody.insertRow();
 
-    while (i < cadastro.length) {
+            let td_numero = tr.insertCell();
+            let td_nome = tr.insertCell();
+            let td_idade = tr.insertCell();
+            let td_sexo = tr.insertCell();
 
-        document.querySelector('#table').innerHTML += ` </tr><td><strong>${i}=${cadastro[i].nome}</strong></td><td> ${cadastro[i].idade}</td><td> ${cadastro[i].sexo}</td></tr></p.`;
-        const nome = document.querySelector('#nome').value=null;
-        const idade = document.querySelector('#idade').value=null;
-        const sexo = document.querySelector('#sexo').value=null;
-        i++;
+            td_numero = this.arraycadastro[i].numero;
+            td_nome = this.arraycadastro[i].nome;
+            td_idade = this.arraycadastro[i].idade;
+            td_sexo = this.arraycadastro[i].sexo;
+
+            excluir.array.forEach('onclick', 'cadastro.excluir(' + this.arraycadastro[i].numero + ')');
+
+
+
+
+        }
+        window.alert("cadastro realizar com sucesso!");
+    };
+
+    lerDados() {
+        let cadastro = {}
+
+        cadastro.numero = this.numero;
+        cadastro.nome = document.getElementById('nome').value;
+        cadastro.idade = document.getElementById('idade').value;
+        cadastro.sexo = document.getElementById('sexo').value;
+        cadastro.table = document.getElementById('table').value;
+        return cadastro;
+
+    };
+    adcionar(cadastro) {
+        this.arraycadastro.push(cadastro);
+        this.numero++;
+    };
+    excluir(numero) {
+        let tbody = document.getElementById('tbody');
+
+        for (let i = 0; i < this.arraycadastro.length; i++) {
+            if (this.arraycadastro[i].numero == id) {
+                this.arraycadastro.splice('i', 1);
+                tbody.deletRow(i);
+            }
+        }
     }
-    window.alert("cadastro realizar com sucesso!");
-};
+    atualizar(id, cadastro) {
+        for (let i = 0; i < this.arraycadastro.length; i++) {
+            if (this.arraycadastro[i].id == id) {
+                this.arraycadastro[i].numero = cadastro.numero;
+                this.arraycadastro[i].nome = cadastro.nome;
+                this.arraycadastr[i].idade = cadastro.idade;
+                this.arraycadastro[i].sexo = cadastro.sexo;
+            }
+        }
+    };
+    editar(dados) {
+        this.editId = dados.id;
+        document.getElementById('numero').value = dados.numero;
+        document.getElementById('nome').value = dados.nome;
+        document.getElementById('idade').value = dados.idade;
+        document.getElementById('sexo').value = dados.sexo;
+        document.getElementById('btn1').innerText = 'atualizar';
+    };
+    cancelar() {
+        document.getElementById('nome').value = '';
+        document.getElementById('idade').value = '';
+        document.getElementById('sexo').value = '';
 
-function excluir() {
+        document.getElementById('btn1').innerText = 'Enviar'
+        this.ediId = nuul;
+    };
+    Excluir() {
+        var excluir = document.querySelector("#excluir");
+        excluir.addEventListener("click.cadastrar()", function () {
+            var div = document.querySelector("#container");
 
-    var cd1 = Number(window.prompt("qual cadastro deseja deletar?"));
-    var cd2 = Number(window.prompt("até que cadastro deseja deletar?"));
-
-    for (var i = 0; i < cadastro.length; i++) {
-        cadastro.push({
-
-            nome: nome.value,
-            idade: idade.value,
-            sexo: sexo.value
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
 
         });
-        var outro = cadastro.splice(cd1, cd2);
-
-        document.querySelector('#table').innerHTML += ` </tr><td><strong>${i}=${cadastro[i].nome}</strong></td><td> ${cadastro[i].idade}</td><td> ${cadastro[i].sexo}</td></tr></p.`;
-
     }
 };
-
-    function editar() {
-      
-    var posic= Number(window.prompt("Digite a linha que deseja editar"));
-
-    let nome = document.querySelector('#nome');
-    let idade = document.querySelector('#idade');
-    let sexo = document.querySelector('#sexo');
-    let table = document.querySelector('#table');
-
-    
-    let cadastro=[];
-
-    cadastro.length;
-    cadastro.push({
-
-        nome: nome.value,
-        idade: idade.value,
-        sexo: sexo.value
-
-    });
-
-    document.querySelector('#table').innerHTML += `</tr><td><strong>${i}=${cadastro[i].nome}</strong></td><td> ${cadastro[i].idade}</td><td> ${cadastro[i].sexo}</td></tr></p.`;
-
-
-}
-
-
-
-
-
 
 
 

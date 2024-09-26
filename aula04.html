@@ -10,69 +10,72 @@
 </head>
 
 <body>
-    <section>
-        <form>
-            <h1>Sistema de Cadastro </h1>
-            <h2><strong>Menu de Opções:</strong></h2>
-
-            <label for="nome">Nome</label>
-            <input type="text" id="nome">
-
-            <p><label for="idade">Idade</label>
-                <input type="number" id="idade">
-            </p>
-
-
-            <div>
-                <p><label for="sexo">Sexo: </label>
-                    <select nome: "sexo" id="sexo">
-                        <option value="Fem">Feminino</option>
-                        <option value="masc">Masculino</option>
-                    </select>
-
-                </p>
-            </div>
-        </form>
-        <div>
-            <P>
-                <input type="submit" value="Enviar" onclick="cadastrar()">
-               <input type="submit" value="Excluir" onclick="excluir()">
-                <input type="submit" value="Editar" onclick="editar()">
-            </p>
-        
+    <h1>Sistema de Cadastro</h1><br><br>
+    <div id="cadastro">
+        <button onclick="soltar()" id="soltar">Clique aqui para cadastrar</button>
+       <button onclick="bancoSalvo(txtNome.vavlue, txtIdade.value, slSexo.value)" id='bancoS'>Carregar</button>
+        <div class="modal">
+            <form name='tbcadastro' id='tbcadastro'>
+                <label>Nome</label>
+                <input type="text" class="txtNome" id="txtNome"><br><br>
+                <label>Idade</label>
+                <input type="number" class="txtIdade" id="txtIdade"><br><br>
+                <label for="Sexo">Sexo:</label>
+                <select id="slSexo" class="slSexo">
+                    <option selected>Feminino</option>
+                    <option>Masculino</option>
+                </select><br><br>
+                <input type="button" class="cad" value="Cadastrar"
+                    onclick="cad(txtNome.value, txtIdade.value, slSexo.value) ">
+                <input type="button" class="editarCadastros" value="Salvar"
+                    onclick="editarCadastros(txtNome.value, txtIdade.value, slSexo.value)">
+                <input type="button" class="cacelar" value="Cancelar"
+                    onclick="cacelarCadastro(txtNome.value,txtIdade.value,slSexo.value)">
+                <div onclick="fechar()" class="fechar">x</div>
         </div>
-        <p>
-        <section>
-            <form>
-                <label>
-        <table id="table">
-            <tbody>
+        <div class="visult">
+
+
+        </div>
+
+    </div>
+    <div id="dtcadastro">
+        <table id="thcadastro">
+            <thead>
                 <tr>
-                    <th>
-                       <h3>Nome</h3>
-                    </th>
-                    <th>
-                          <h3>Idade</h3>
-                    </th>
-                    <th>
-                        <h3>Sexo</h3>
-                    </th>
+                    <td>Numero</td>
+                    <td>Nome</td>
+                    <td>Idade</td>
+                    <td>Sexo</td>
+                    <td class="center">Opcoes</td>
                 </tr>
+            </thead>
+            <tbody id="tbody">
+
             </tbody>
-
         </table>
-    </label>
+    </div>
     </form>
-    </section>
-
-        </p>
-        <div id="list"></div>
     </section>
     <footer>
         <p>&copy; Josileia</p>
     </footer>
-    <script src="script.js"></script>
-
+    <script src="novoarquivo.js">
+    </script>
+    <script src="editarArquivo.js">
+    </script>
+    <script src="delet&cancelarArquivo.js">
+    </script>
+    <script src="visul&desabilit.js">
+    </script>
+    <script src="functionDisplay.js">
+    </script>
+    <script src="cadastrar.js">
+    </script>
+    <script src=bancoSalvo.js>
+    </script>
+    <script src=preencheCamposForm.js>
+    </script>
 </body>
 
 </html>

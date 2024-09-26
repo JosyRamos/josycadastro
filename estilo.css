@@ -2,59 +2,202 @@ body{
     background: rgba(56, 54, 54, 0.212);
     font:normal 15pt arial;
     text-align: center;
-
-}
-head{
-    text-align: center;
-
-}
-section{
-    background: white;
-    border-radius: 30PX;
-    padding: 20px;
-    width: 600px;
-    margin:auto;
-    text-align: center;
-    box-shadow: 6px 6px 11px black;
-
-}
-footer{
-    text-align: center;
-    font-style: italic;
-
+    /*background-image: url(https://imgur.com/mK5j6Cw.png);*/
+    background-image: url(https://i.imgur.com/Qz0cmHd.jpg);
+  
 }
 h1{
-    font: italic;
+    font: italic;   
     color: black;
-    padding: 5px;
-    box-shadow: 6px 6px 11px black;
-    border-radius: 20px;
-    width: 500px;
+    padding: 5px ;
+    box-shadow: 10px 10px 11px black;
+    border-radius: 20px, center;
+    width: 600px;
     text-align: center;
-    margin:10px;
-    
+    margin:10px auto;
 }
-table{
+form{
+  background-color: whitesmoke;
+  border-radius: 10px;
+    width: 60%;
+    height: 40%;
+    text-align: center;
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+  /* background-image: url(https://imgur.com/WrBAxun.png);*/
+  background-image: url(https://i.imgur.com/Qz0cmHd.jpg);
+
+}
+td{
     font-style: normal;
-    padding: 30 px;
-    box-shadow: black;
-    width:  30px auto;
+    padding: 30px, center;
+    width: 10px auto;
     text-align: center;
-    margin:10PX;
-}
+    margin:10px;}
 
-.cadastrar{
-    background: cyan;
-
-}
-section{
+footer{
+    background-color: rgba(0, 0, 0, 0);
     text-align: left;
-    border: solid;
+    width: auto, 10px;
+   margin:10px, auto;
 }
-h3{
+th{
+
     font-style: normal;
     padding: 30px;
     width: 10px auto;
     text-align: center;
     margin:10px;
 }
+input {
+   
+    background-color: rgba(0, 0, 0, 0.048);
+}
+select{
+    box-shadow: 20px, 20px, 20px black;
+    border-radius: 30px, black;
+}
+table{
+    background: rgba(255, 255, 255, 0.425) ;
+    border-radius: 30px, center;
+    padding: 20px;
+    width: 600px ;
+    margin:30px auto;
+    text-align:center;
+    box-shadow: 6px 6px 11px black;
+}
+tr{
+    background-color:rgba(0, 0, 0, 0.24);
+}
+table td img{
+    width: 27px;
+    border-radius: 20px;
+    padding: 5px ;
+    margin-top: 5PX,auto;
+    background:rgba(0, 0, 0, 0.479);
+}
+
+.modal{
+    font-family: italic;
+    top:0;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   display: none;
+    justify-content: center;
+   position: fixed;
+   background-color: rgb(0,0,0,0.5);
+   transform: scale(1.1);
+    }
+    .fechar{
+        width: 30px;
+        height: 30px;
+        background:rgba(0, 0, 0, 0.479);
+        top:0px;
+        border-radius: 50%;
+        float: right;
+        padding: auto;
+        cursor: pointer;
+    }
+    button{
+        font:italic;
+        color:black;
+        box-shadow:10px,10px,11px ,black;
+        border-radius: 20px;
+        padding: 5px;
+        width: 10%;
+        height: 10%;
+        text-align: center;
+        margin: 10px;
+
+        
+    }
+    .visult{
+        width: 700px;
+        height: 300px;
+        background-color:rgba(0, 0, 0, 0.24);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        text-align:right;
+        padding: 20px;
+       display: none;
+       margin: 40px;
+       
+    }
+    .cad{
+        background-color:rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top:60%;
+        left:40%;
+        transform: translate(-10%,-10%);
+        display: none;
+     
+    }
+
+    .bancoS{
+        background-color:rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+        width: 30%;
+        height: 20%;
+        position: absolute;
+        top:60%;
+        left:30%;
+        transform: translate(-10%,-10%);
+    }
+    .editarCadastros{
+        background-color:rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top:60%;
+        left:40%;
+        transform: translate(-10%,-10%);
+        display: none;
+    }
+    .cacelar{
+        background-color:rgba(0, 0, 0, 0.24);
+        border-radius: 10px;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top:60%;
+        left:60%;
+        transform: translate(-10%,-10%);
+        display: block;
+       
+    }
+    .txtNome{
+        width:200px;
+        height: 20px;
+        background-color:rgba(0, 0, 0, 0.123);
+      
+       
+       
+    }
+    .slSexo{
+        width:200px;
+        height: 20px;
+        background-color:rgba(0, 0, 0, 0.123);
+
+       
+    }
+    .txtIdade{
+        width:200px;
+        height: 20px;
+        background-color:rgba(0, 0, 0, 0.123);
+       
+
+    }
+    
+    
+
+    
+    
+   
